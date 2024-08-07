@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(35, 43, 46);
+    padding: 0px;
+    margin: 0px;
+}
+
+#title{
+    font-size: 100px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+    margin-top: 150px;
+}
+#subtitle{
+    font-size: 110px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(48, 155, 255);
+    padding: 0px;
+    margin: 0px;
+    margin-top: 50px;
+}
+
+#buttonsdiv{
+    text-align: center;
+    margin-top: 100px;
+}
+#buttonsdiv p{
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.startbuttons{
+    background-color: rgb(0, 91, 196);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 20px;
+}
