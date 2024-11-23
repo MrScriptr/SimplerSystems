@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimplerSystems</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
 </head>
 <body>
-    <div id="titleholder">
-        <p id="title">Hatching made</p>
-        <p id="subtitle">Simpler</p>'
+    <div id="container">
+        <div id="display">
+            <p id="displaytext">0</p>
+        </div>
+        <div id="buttonscontainer">
+            <div id="row1" class="buttonrow">
+                <button id="1" class="button">1</button>
+                <button id="2" class="button">2</button>
+                <button id="3" class="button">3</button>
+                <button id="+" class="extrabutton">+</button>
+            </div>
+            <div id="row2" class="buttonrow">
+                <button id="4" class="button">4</button>
+                <button id="5" class="button">5</button>
+                <button id="6" class="button">6</button>
+                <button id="-" class="extrabutton">-</button>
+            </div>
+            <div id="row3" class="buttonrow">
+                <button id="7" class="button">7</button>
+                <button id="8" class="button">8</button>
+                <button id="9" class="button">9</button>
+                <button id="x" class="extrabutton">x</button>
+            </div>
+            <div id="row4" class="buttonrow">
+                <button id="." class="extrabutton">.</button>
+                <button id="0" class="button">0</button>
+                <button id="=" class="extrabutton">=</button>
+                <button id="/" class="extrabutton">/</button>
+            </div>
+        </div>
     </div>
-
-    <p class="text">Upload and Find all the projects, templates, and systems you need!</p>
-
-    <div id="buttonsdiv">
-        <p>Get started</p>
-        <p class="startbuttons">Upload code</p>
-        <p class="startbuttons">See creations</p>
-    </div>
+    <script src="calc.js"></script>
 </body>
 </html>
